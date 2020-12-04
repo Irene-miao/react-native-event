@@ -14,10 +14,27 @@ function EventsHomeScreen({ navigation }) {
   );
 }
 
-function EventsSecondScreen() {
+function EventsSecondScreen({navigation}) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>Events second screen!</Text>
+      <Button
+        title="Next"
+        onPress={() => navigation.navigate("EventsThird")}
+      ></Button>
+    </View>
+  );
+}
+
+
+function EventsThirdScreen({navigation}) {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Events third screen!</Text>
+      <Button
+        title="Go home"
+        onPress={() => navigation.navigate("EventsHome")}
+      ></Button>
     </View>
   );
 }
@@ -29,6 +46,7 @@ export default function EventsScreen() {
     <Stack.Navigator>
       <Stack.Screen name="EventsHome" component={EventsHomeScreen} />
       <Stack.Screen name="EventsSecond" component={EventsSecondScreen} />
+      <Stack.Screen name="EventsThird" component={EventsThirdScreen} />
     </Stack.Navigator>
   );
 }
