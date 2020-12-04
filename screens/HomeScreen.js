@@ -30,7 +30,7 @@ const dataArray = [
 
 function HomeMainScreen() {
   return (
-    <View style={{ padding: 10}}>
+    <View style={{ padding: 10, marginTop: 10, marginBottom: 10,}}>
       <Text style={styles.titleText}>
 International Cat Day
       </Text>
